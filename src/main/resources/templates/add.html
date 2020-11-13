@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Add new city</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="#" th:action="@{/addcity}" th:object="${city}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Population: <input type="number" th:field="*{population}" /></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>

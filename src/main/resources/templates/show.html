@@ -14,14 +14,16 @@
         <th>Id</th>
         <th>Name</th>
         <th>Population</th>
+        <th>Delete</th>
     </tr>
 
     <tr th:each="city : ${cities}">
         <td th:text="${city.id}">Id</td>
         <td th:text="${city.name}">Name</td>
         <td th:text="${city.population}">Population</td>
+        <td><a th:href="@{/delete/{id}(id=${city.id})}">Delete</a></td>
     </tr>
 </table>
-
+<p><a href="/signup">Add a new city</a></p>
 </body>
 </html>

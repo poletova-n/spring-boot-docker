@@ -1,3 +1,5 @@
+package hello;
+
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,8 +22,12 @@ public class City {
     }
 
     public City(Long id, String name, int population) {
-
         this.id = id;
+        this.name = name;
+        this.population = population;
+    }
+
+    public City(String name, int population) {
         this.name = name;
         this.population = population;
     }

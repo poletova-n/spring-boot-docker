@@ -1,23 +1,11 @@
-<div th:switch="${books}">
-    <h2 th:case="null">No books yet!</h2>
-    <div th:case="*">
-        <h2>Books</h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Author</th>
-                <th>Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="book : ${books}">
-                <td th:text="${book.name}"></td>
-                <td th:text="${book.author}"></td>
-                <td><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <p><a href="/addBook">Add a new book</a></p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="show">Show cities</a>
+</body>
+</html>
